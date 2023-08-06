@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /* Ej 15
-int esLetra(char letra){
+int esletra(char letra){
     if((letra >= 'a') && (letra <= 'z')){
         return 0;
     }
@@ -15,7 +15,7 @@ int main(){
     char letra;
     printf("ingrese una letra\n");
     scanf("%c", &letra);
-    int estaBien = esLetra(letra);
+    int estaBien = esletra(letra);
     if(estaBien == 2){
         printf("debe ingresar una letra\n");
         return 0;
