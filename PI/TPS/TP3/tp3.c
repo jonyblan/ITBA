@@ -3,22 +3,105 @@
 // or looking for a real world implementation.
 
 
-/* Ej 15. Falta terminar (verificar si el numero ingresado es binario)
+/* Ej 19.2 15/25
 #include <stdio.h>
 int main(){
-    int num, decimal = 0, aux, aux2=1;
+    float num;
+    scanf("%f", &num);
+    int numEntero = num, cantDecimal = 0, cantEntero = 0, cantDecimales = 0;
+    while(num!= (numEntero+0.0)){
+        num=num*10;
+        numEntero = num;
+        cantDecimales++;
+    }
+    while(numEntero>0){
+        if(numEntero%10==5){
+            if(cantDecimales>0){
+                cantDecimal++;
+            }
+            else{
+                cantEntero++;
+            }
+        }
+        cantDecimales--;
+        numEntero=numEntero/10;
+    }
+    printf("Cant enteros: %d\nCant decimales: %d\n", cantEntero, cantDecimal);
+}
+*/
+/* Ej 19.1 7/10
+#include <stdio.h>
+int main(){
+    int num, cant = 0;
+    scanf("%d", &num);
+    while(num>0){
+        if(num%10==5){
+            cant++;
+        }
+        num=num/10;
+    }
+    printf("%d\n", cant);
+}
+*/
+/* Ej 18. 10/10
+#include <stdio.h>
+int main(){
+    int num, factorial=1;
+    scanf("%d", &num);
+    if(num<0){
+        printf("choose a valid number (>=0)\n");
+    }
+    else{
+        while(num>0){
+            factorial=factorial*num;
+            num--;
+        }
+        printf("%d\n", factorial);
+    }
+    return 0;
+}
+*/
+/* Ej 17. 5/5
+#include <stdio.h>
+int main(){
+    int num = 1;
+    while(1){
+        printf("%d\n", num=num*10);
+    }
+    return 0;
+}
+*/
+/* Ej 16. 9/15
+#include <stdio.h>
+int main(){
+    int decimal, numNum = 0, pasada=1;
+    scanf("%d", &decimal);
+    while(decimal>0){
+        int num=decimal%2;
+        numNum = numNum+num*pasada;
+        decimal=decimal-num;
+        decimal = decimal/2;
+        pasada=pasada*10;
+    }
+    printf("%d", numNum);
+}
+*/
+/* Ej 15. 11/10 Check how to do it better
+#include <stdio.h>
+int main(){
+    int num;
+    long decimal = 0, aux2=1;
     scanf("%d", &num);
     while(num>=1){
-        aux = num%2;
-        decimal = decimal + aux*aux2;
+        if(num%10 != 0 && num%10 != 1){
+            printf("no es un numero en binario\n");
+            return 0;
+        }
+        decimal = decimal + (num%2)*aux2;
         aux2=aux2*2;
         num = num/10;
     }
-    if(num>1){
-        printf("a");
-        return 0;
-    }
-    printf("El numero en decimal es %d\n", decimal);
+    printf("El numero en decimal es %ld\n", decimal);
     return 0;
 }
 */
@@ -58,8 +141,7 @@ int main(){
 #include <stdio.h>
 int main(){
     printf("N\t10*N\t100*N\t1000*N\n");
-    int i;
-    for(i=1;i<=20;i++){
+    for(int i=1;i<=20;i++){
         printf("%d\t%d\t%d\t%d\n", i, i*10, i*100, i*1000);
     }
     return 0;
