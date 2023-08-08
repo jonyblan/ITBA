@@ -6,10 +6,11 @@ Execute:
 Basic Program:
     #include <stdio.h>
     int main(void){
-        int name;
-        scanf("%d", &name);
+        int num, a = 9, b = 2;
+        div = a/(double)b;
+        scanf("%d", &num);
         char char1 = getchar();
-        printf("%d - %c", name, char1);
+        printf("%d - %c - %d\n", num, char1, div);
         return 0;
     }
 
@@ -24,6 +25,22 @@ Basic Program:
     - s: string
     - e: double
 
+dataTypes:
+    Type	                Size (bytes)	                     Format Specifier
+    int	                    at least 2, usually 4	             %d, %i
+    char	                1	                                 %c
+    float	                4	                                 %f
+    double	                8	                                 %lf
+    short int	            2 usually	                         %hd
+    unsigned int            at least 2, usually 4	             %u
+    long int	            at least 4, usually 8	             %ld, %li
+    long long int	        at least 8	                         %lld, %lli
+    unsigned long int	    at least 4	                         %lu
+    unsigned long long int	at least 8	                         %llu
+    signed char           	1	                                 %c
+    unsigned char	        1	                                 %c
+    long double	            at least 10, usually 12 or 16	     %Lf
+
 \:
     - n: new line   ✓
     - t: tab        ✓
@@ -37,5 +54,17 @@ Const:
     typedef enum {False = 0, True} bool; [typedef enum {data} newName]
 
 int x = 2; --> type, name, left value (dir memory), right value (value)
+
+Bit Manipulation (int only):
+    - ~: bit level complement [(~01010 = 10101) (~10 = -11)]
+    - <<: shifts to the left (bigger number) [110<<2 = 110000]
+    - >>: shifts to the right (smaller number) [110>>2 = 1]
+    - &: bit level and [(101) & (100) = (001)]
+    - |: bit level or
+    - ^: bit level xor
+
+Extra facts:
+    - ++x: x = 1 --> y = x++ --> y = 1, x = 2
+    - x++: x = 1 --> y = ++x --> y = 2, x = 2
 
 */

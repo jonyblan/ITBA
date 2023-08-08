@@ -3,6 +3,24 @@
 // or looking for a real world implementation.
 
 
+
+
+
+
+/* Ej 20. 10/10
+#import <stdio.h>
+int main(){
+    int exactitud = 20, i;
+    long double e = 1, divisor=1;
+    printf("N\te\n%d\t%d\n", 1, 1);
+    for(i = 1;i<=exactitud;i++){
+        divisor*=i;
+        e+=1/divisor;
+        printf("%d\t%.62Lf\n", i, e);
+    }
+    return 0;
+}
+*/
 /* Ej 19.2 15/25
 #include <stdio.h>
 int main(){
@@ -86,20 +104,20 @@ int main(){
     printf("%d", numNum);
 }
 */
-/* Ej 15. 11/10 Check how to do it better
+/* Ej 15. 11/10 Fine though
 #include <stdio.h>
 int main(){
-    int num;
-    long decimal = 0, aux2=1;
+    int num, aux2=1;
+    long decimal = 0;
     scanf("%d", &num);
     while(num>=1){
         if(num%10 != 0 && num%10 != 1){
             printf("no es un numero en binario\n");
             return 0;
         }
-        decimal = decimal + (num%2)*aux2;
+        decimal = decimal + (num%10)*aux2;
         aux2=aux2*2;
-        num = num/10;
+        num = num>>1;
     }
     printf("El numero en decimal es %ld\n", decimal);
     return 0;

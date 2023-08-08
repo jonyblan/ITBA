@@ -1,10 +1,11 @@
 #include <stdio.h>
 
+
+
 int main(){
-    enum week {Monday = 0, Tuesday, Wednesday};
-    typedef enum week typeWeek;
-    typeWeek day;
-    day = Tuesday;
-    printf("%d\n", 10/0);
+    int i;
+    for(i=0;i<10000;i++){
+        printf("%d, ", i);
+    }
     return 0;
 }
