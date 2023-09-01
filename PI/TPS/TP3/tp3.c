@@ -1,13 +1,44 @@
-// Lines are counted as long as they're not brackets or declaration/definition of a variable
+// Lines are counted as long as they're usable code (not declaration, brackets, 1st return, etc)
 // The objective of these excercises is to write a code is as few lines as possible, not readability
 // or looking for a real world implementation.
 
 
-
-
-
-
-/* Ej 20. 10/10
+/* Ej 25. 6/NA
+#import <stdio.h>
+int main(){
+    int num, count = 0;
+    scanf("%d", &num);
+    while(num>0){
+        if(((num>>1)*2 != num) || num == 1){
+            count++;
+        }
+        num = num>>1;
+    }
+    printf("count: %d", count);
+    return 0;
+}
+*/
+/* Ej 21. 9/10
+#include <stdio.h>
+int main(){
+    int num, i, a = 1, alReves=0;
+    scanf("%d", &num);
+    int aux = num, aux2 = num;
+    for(i = 0; num>0; i++){
+        alReves = alReves*10+num%10;
+        num/=10;
+        a*=10;
+    }
+    if(alReves == aux2){
+        printf("El numero es capicua\n");
+    }
+    else{
+        printf("El numero no es capicua\n");
+    }
+    return 0;
+}
+*/
+/* Ej 20. 7/10
 #import <stdio.h>
 int main(){
     int exactitud = 20, i;
@@ -21,7 +52,7 @@ int main(){
     return 0;
 }
 */
-/* Ej 19.2 15/25
+/* Ej 19.2 14/25
 #include <stdio.h>
 int main(){
     float num;
@@ -45,9 +76,10 @@ int main(){
         numEntero=numEntero/10;
     }
     printf("Cant enteros: %d\nCant decimales: %d\n", cantEntero, cantDecimal);
+    return 0;
 }
 */
-/* Ej 19.1 7/10
+/* Ej 19.1 6/10
 #include <stdio.h>
 int main(){
     int num, cant = 0;
@@ -59,9 +91,10 @@ int main(){
         num=num/10;
     }
     printf("%d\n", cant);
+    return 0;
 }
 */
-/* Ej 18. 10/10
+/* Ej 18. 8/10
 #include <stdio.h>
 int main(){
     int num, factorial=1;
@@ -79,7 +112,7 @@ int main(){
     return 0;
 }
 */
-/* Ej 17. 5/5
+/* Ej 17. 3/5
 #include <stdio.h>
 int main(){
     int num = 1;
@@ -89,7 +122,7 @@ int main(){
     return 0;
 }
 */
-/* Ej 16. 9/15
+/* Ej 16. 8/15
 #include <stdio.h>
 int main(){
     int decimal, numNum = 0, pasada=1;
@@ -102,9 +135,10 @@ int main(){
         pasada=pasada*10;
     }
     printf("%d", numNum);
+    return 0;
 }
 */
-/* Ej 15. 11/10 Fine though
+/* Ej 15. 9/10 Fine though
 #include <stdio.h>
 int main(){
     int num, aux2=1;
@@ -117,13 +151,13 @@ int main(){
         }
         decimal = decimal + (num%10)*aux2;
         aux2=aux2*2;
-        num = num>>1;
+        num  = num>>1;
     }
     printf("El numero en decimal es %ld\n", decimal);
     return 0;
 }
 */
-/* Ex 14. 11/15
+/* Ex 14. 9/15
 #include <stdio.h>
 int main(){
     char char1 = 'a', minChar = 'Z' + 1;
@@ -141,7 +175,7 @@ int main(){
     return 0;
 }
 */
-/* Ex 13. 7/NA
+/* Ex 13. 5/NA
 #include <stdio.h>
 int main(){
     int side, i;
@@ -155,7 +189,7 @@ int main(){
     return 0;
 }
 */
-/* Ex 11. 6/6
+/* Ex 11. 4/6
 #include <stdio.h>
 int main(){
     printf("N\t10*N\t100*N\t1000*N\n");
@@ -165,7 +199,7 @@ int main(){
     return 0;
 }
 */
-/* Ex 3. 13/15
+/* Ex 3. 11/15
 #include <stdio.h>
 int main(void){
     int num;
@@ -183,7 +217,7 @@ int main(void){
     return 0;
 }
 */
-/* Ex 2. 9/15
+/* Ex 2. 7/15
 #include <stdio.h>
 int main(){
     int a, b;
@@ -198,7 +232,7 @@ int main(){
     return 0;
 }
 */
-/* Ex 1. 9/15
+/* Ex 1. 7/15
 #include <stdio.h>
 int main(){
     char char1 = getchar();

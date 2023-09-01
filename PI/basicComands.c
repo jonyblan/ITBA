@@ -2,6 +2,7 @@
 Execute:
     cd /mnt/c/Users/Usuario/desktop/PI/TPS
     gcc [name].c -o [nameNewFile]
+    -lm: math.h
 
 Basic Program:
     #include <stdio.h>
@@ -23,7 +24,8 @@ Basic Program:
     - u: unsigned int
     - x: hexa
     - s: string
-    - e: double
+    - e: double (exponential)
+    - g: double (chooses between f and e)
 
 dataTypes:
     Type	                Size (bytes)	                     Format Specifier
