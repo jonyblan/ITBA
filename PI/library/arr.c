@@ -66,8 +66,6 @@ void getMultiples(int arr[], int num, int cant){
     }
 }
 
-// checked
-
 // gets an ammount of seconds and return an array with {hours, minutes, seconds}
 void timeSecondHour(int seconds, int time[]){
     time[0] = seconds/3600;
