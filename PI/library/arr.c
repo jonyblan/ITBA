@@ -168,3 +168,11 @@ void hexaToDecimal(unsigned char arrChar[], int arr[], int len){
 }
 
 // ckecked
+
+void showArr(int arr[], int size){
+    int i;
+    for(i=0; i<size-1; i++){
+        printf("%d - ", arr[i]);
+    }
+    printf("%d\n", arr[size-1]);
+}
